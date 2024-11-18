@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Konstanta percepatan mobil (dalam m/s^2)
+a = 2
+
+# Waktu dari 0 hingga 20 detik
+t = np.arange(0, 20, 0.1)
+
+# Posisi mobil sebagai fungsi waktu
+x = 0.5 * a * t**2
+
+# Menampilkan grafik posisi terhadap waktu
+plt.plot(t, x, label="Posisi Mobil (x(t))")
+
+# Menambahkan label, judul, dan grid
+plt.xlabel("Waktu (detik)")
+plt.ylabel("Posisi (meter)")
+plt.title("Posisi Mobil Terhadap Waktu")
+plt.legend()
+plt.grid(True)
+plt.show()

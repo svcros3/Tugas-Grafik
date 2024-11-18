@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Definisi fungsi posisi s(t)
+def posisi(t):
+    return 20 * t  
+    
+# Mendefinisikan rentang waktu t
+t = np.arange(0, 5 * 60, 1)  # Dari 0 hingga 5 menit (300 detik) dengan interval 1 detik
+
+# Menghitung nilai posisi s untuk setiap nilai waktu t
+s = posisi(t)
+
+# Menampilkan grafik posisi terhadap waktu
+plt.plot(t, s, label="Grafik fungsi s(t) = 20t", color="blue")
+
+# Menambahkan label, judul, dan grid
+plt.xlabel("Waktu (detik)")
+plt.ylabel("Posisi (meter)")
+plt.title("Grafik Posisi terhadap Waktu untuk Gerak Lurus Berkecepatan Konstan")
+plt.legend()
+plt.grid(True)
+plt.show()

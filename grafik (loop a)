@@ -1,0 +1,27 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Kecepatan konstan (dalam m/s)
+v0 = 20  # m/s
+
+# Waktu dari 0 hingga 5 menit (300 detik)
+t_max = 300  
+dt = 1  
+t = np.arange(0, t_max + dt, dt)  
+
+# Menghitung posisi x(t) menggunakan loop
+x = []
+for time in t:
+    x_t = v0 * time  
+    x.append(x_t)
+
+# Menampilkan grafik posisi terhadap waktu
+plt.plot(t, x, label="Posisi Benda (x(t))")
+
+# Menambahkan label, judul, dan grid
+plt.xlabel("Waktu (detik)")
+plt.ylabel("Posisi (meter)")
+plt.title("Posisi Benda dengan Kecepatan Konstan Terhadap Waktu")
+plt.legend()
+plt.grid(True)
+plt.show()

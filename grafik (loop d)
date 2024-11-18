@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Konstanta kecepatan awal dan perlambatan
+v0 = 60  # m/s
+a = -2.25  # m/s^2
+
+# Waktu dari 0 hingga 20 detik
+t_max = 20
+dt = 0.1
+t = np.arange(0, t_max, dt)
+
+# Menghitung posisi x(t) menggunakan loop
+x = []
+for time in t:
+    x_t = v0 * time + 0.5 * a * time**2
+    x.append(x_t)
+
+# Menampilkan grafik posisi terhadap waktu
+plt.plot(t, x, label="Posisi Benda dengan Perlambatan")
+plt.xlabel("Waktu (detik)")
+plt.ylabel("Posisi (meter)")
+plt.title("Posisi Benda Terhadap Waktu dengan Perlambatan")
+plt.legend()
+plt.grid(True)
+plt.show()

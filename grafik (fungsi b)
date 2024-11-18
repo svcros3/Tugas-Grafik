@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Konstanta percepatan gravitasi (dalam m/s^2)
+g = 9.8
+
+# Waktu jatuh benda dari 0 hingga 2 menit (120 detik)
+t = np.arange(0, 120, 0.05)
+
+# Posisi benda sebagai fungsi waktu (dengan v0 = 0, y0 = 0)
+y = 0.5 * g * t**2
+
+# Menampilkan grafik posisi terhadap waktu
+plt.plot(t, y, label="Posisi benda (y(t))")
+
+# Menambahkan label, judul, dan grid
+plt.xlabel("Waktu (detik)")
+plt.ylabel("Posisi (meter)")
+plt.title("Posisi Benda Jatuh Bebas Terhadap Waktu")
+plt.legend()
+plt.grid(True)
+plt.show()
